@@ -11,9 +11,9 @@ private const val APP_ID = "9c578f0523a6a83882f795be91d89251"
 
 private const val BASE_URL = ""
 
-class ApiService(val client: HttpClient) {
+class ApiService(val client: HttpClient): RemoteDataSource {
 
-    suspend fun currentWeatherInfo(lat: Double, long: Double): WeatherResponse {
+    override suspend fun currentWeatherInfo(lat: Double, long: Double): WeatherResponse {
         return client.get {
             url {
                 host = "api.openweathermap.org"
@@ -25,7 +25,7 @@ class ApiService(val client: HttpClient) {
         }.body<WeatherResponse>()
     }
 
-    suspend fun forecastInfo(lat: Double, long: Double): ForecastResponse {
+    override suspend fun forecastInfo(lat: Double, long: Double): ForecastResponse {
         return client.get {
             url {
                 host = "api.openweathermap.org"

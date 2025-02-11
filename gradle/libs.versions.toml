@@ -5,7 +5,7 @@ compose = "1.7.4"
 compose-material3 = "1.3.0"
 androidx-activityCompose = "1.9.3"
 
-koinCore = "3.5.3"
+koinCore = "4.0.0"
 ktorClientAndroid = "2.3.11"
 androidx-lifecycle = "2.8.0"
 ktorClientCore = "2.3.12"
@@ -33,6 +33,8 @@ ps-location = { module = "com.google.android.gms:play-services-location", versio
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCore" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinCore" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koinCore" }
 
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorClientDarwin" }
