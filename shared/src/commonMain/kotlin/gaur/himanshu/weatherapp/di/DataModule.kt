@@ -5,6 +5,7 @@ import gaur.himanshu.weatherapp.data.datasource.remote.ApiService
 import gaur.himanshu.weatherapp.data.datasource.remote.KtorClient
 import gaur.himanshu.weatherapp.data.repository.WeatherRepositoryImp
 import gaur.himanshu.weatherapp.domain.repository.WeatherRepository
+import gaur.himanshu.weatherapp.getPlatform
 import gaur.himanshu.weatherapp.presentation.weather.WeatherViewModel
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModelOf
@@ -20,4 +21,5 @@ val dataModule = module {
     singleOf(::WeatherRepositoryImp).bind<WeatherRepository>()
 
     viewModelOf(::WeatherViewModel)
+    //factory { getPlatform(this) }
 }
